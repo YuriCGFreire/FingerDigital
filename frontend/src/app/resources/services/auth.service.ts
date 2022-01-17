@@ -5,13 +5,13 @@ import { ResponseLogin } from '../models/ResponseLogin';
   providedIn: 'root'
 })
 export class AuthService {
-  public loginResponse!: ResponseLogin | undefined;
+  public loginResponse?: ResponseLogin;
 
   public clear():void{
     this.loginResponse = undefined;
   }
 
   public isAuthenticated():boolean{
-    return Boolean(this.loginResponse?.jwt)
+    return Boolean(this.loginResponse?.jwtToken)
   }
 }

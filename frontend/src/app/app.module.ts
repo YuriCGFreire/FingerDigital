@@ -10,11 +10,13 @@ import {InputTextModule} from 'primeng/inputtext'
 import { LoginComponent } from './views/login/login.component';
 import {ButtonModule} from 'primeng/button'
 import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './views/signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

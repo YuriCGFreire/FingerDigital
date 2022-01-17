@@ -1,3 +1,5 @@
 export class ResponseLogin {
-  public jwt!: string;
+  public email!: string;
+  public jwtToken!: string;
+  public name!: string;
 }

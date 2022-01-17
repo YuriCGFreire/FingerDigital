@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertService } from 'src/app/resources/services/alert.service';
 import { LoginService } from 'src/app/resources/services/login.service';
 import {RequestLogin} from "../../resources/models/RequestLogin"
 
@@ -11,7 +13,10 @@ export class LoginComponent implements OnInit {
 
   public requestLogin!: RequestLogin;
 
-  constructor(private loginService: LoginService) { }
+  constructor(
+    private loginService: LoginService,
+    private alertService: AlertService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.requestLogin = new RequestLogin();
@@ -19,11 +24,15 @@ export class LoginComponent implements OnInit {
 
   public login():void {
     this.loginService.login(this.requestLogin).subscribe(data => {
-      console.log(data)
+      this.router.navigate(['home'])
     },
-    error => {
-      console.error(error)
+    httperror => {
+      this.alertService.error(httperror.error.message)
     })
+  }
+ 
+  public navigateToSignup():void {
+    this.router.navigate(['signup'])
   }
 
 }
