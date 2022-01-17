@@ -26,4 +26,4 @@ Comandos finais para rodar o projeto:
 
 "npm run start:dev" no backend. Irá rodar na porta 3000
 
-"ng s" no frontedn. Irá rodar na porta 4200
+"ng s" no frontend. Irá rodar na porta 4200
