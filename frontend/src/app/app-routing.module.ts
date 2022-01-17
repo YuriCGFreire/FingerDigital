@@ -7,7 +7,7 @@ import { SignupComponent } from './views/signup/signup.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home',
-    /* canActivate: [AuthGuardianService], */
+    canActivate: [AuthGuardianService],
     loadChildren: () => import('./views/home/home.module').then(m => m.HomeModule)
   },
   {path: 'signup', component: SignupComponent},
