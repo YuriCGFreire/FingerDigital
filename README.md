@@ -16,7 +16,8 @@ Em seguida precisa configuar a conexão com o banco de dados, no arquivo app.mod
     password: "password do db",
     database: 'nome do db',
     autoLoadEntities: true,
-    synchronize: true
+    synchronize: true    
+}
 ```
 
 **Obs: Projeto desenvolvido com Postgresql, para isso precisa ser um DB Postgres.**
