@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SignupComponent implements OnInit {
 
   constructor() { }
-
+ 
   ngOnInit(): void {
   }
 
